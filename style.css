@@ -20,3 +20,18 @@
 #amarelo {
     background-color: yellow;
 }
+
+#pixel-board {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pixel {
+    display: inline-block;
+    border: 1px solid black;
+    height: 80px;
+    width: 80px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    background-color: white;
+}
