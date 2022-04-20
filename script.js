@@ -21,3 +21,12 @@ pixelBoard.addEventListener('click', function (event) { // Eu consegui fazer ess
     } else {
     }
 })
+
+let button = document.querySelector('#clear-board')
+button.addEventListener('click', function () {
+    let coiso = document.querySelectorAll('.pixel')
+    for(let index = 0; index < coiso.length; index += 1) {
+        let atual = coiso[index]
+        atual.style.backgroundColor = 'white'
+    }
+})

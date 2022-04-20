@@ -21,6 +21,10 @@
     background-color: yellow;
 }
 
+#clear-board {
+    margin-left: 80px;
+}
+
 #pixel-board {
     margin-top: 10px;
     margin-left: 10px;
