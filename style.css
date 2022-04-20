@@ -21,7 +21,12 @@
     background-color: yellow;
 }
 
+#board-size, #generate-board {
+    margin-top: 7px;
+}
+
 #clear-board {
+    margin-top: 10px;
     margin-left: 80px;
 }
 
