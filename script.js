@@ -1,4 +1,4 @@
-window.onload = function () { // Quando a página carregar, a cor selecionada será preto
+window.onload = function () { // Quando a página carregar, a cor selecionada será preto e outras cores serão geradas aleatoriamente.
     document.querySelector('#preto').className = 'color selected'
     document.querySelector('#cor2').style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')'
     document.querySelector('#cor3').style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')'
@@ -43,7 +43,18 @@ button.addEventListener('click', function () {
     let tamanhoQuadro = document.querySelector('#board-size').value
     if (tamanhoQuadro === '') {
         alert('Board inválido!')
-    } else if (tamanhoQuadro >= 5 && tamanhoQuadro <= 50) {
+    }
+
+    function verificarNumero() {
+        if (tamanhoQuadro < 5) {
+            tamanhoQuadro = 5
+        } else if (tamanhoQuadro > 50) {
+            tamanhoQuadro = 50
+        }
+    }
+    verificarNumero()
+    
+    if (tamanhoQuadro >= 5 && tamanhoQuadro <= 50) {
         let pixelBoardAtual = document.querySelector('#pixel-board').children
         if (pixelBoardAtual.length > 0) { // vai apagar o board anterior
             for (let index2 = 0; pixelBoardAtual.length > 0; index2 += 1) {
