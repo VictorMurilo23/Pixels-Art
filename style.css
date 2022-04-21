@@ -9,18 +9,6 @@
     background-color: black;
 }
 
-#verde {
-    background-color: green;
-}
-
-#azul {
-    background-color: blue;
-}
-
-#amarelo {
-    background-color: yellow;
-}
-
 #board-size, #generate-board {
     margin-top: 7px;
 }

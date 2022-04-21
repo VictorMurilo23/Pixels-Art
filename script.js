@@ -1,7 +1,11 @@
-window.onload = function () {
+window.onload = function () { // Quando a página carregar, a cor selecionada será preto
     document.querySelector('#preto').className = 'color selected'
+    document.querySelector('#cor2').style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')'
+    document.querySelector('#cor3').style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')'
+    document.querySelector('#cor4').style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')'
 }
 
+// Pra selecionar a cor atual
 let colorPalette = document.querySelector('#color-palette')
 colorPalette.addEventListener('click', function (event) {
     if(event.target.className == 'color') {
@@ -12,6 +16,7 @@ colorPalette.addEventListener('click', function (event) {
     }
 })
 
+// Pra pintar os pixels
 let pixelBoard = document.querySelector('#pixel-board')
 pixelBoard.addEventListener('click', function (event) { // Eu consegui fazer essa função graças as dicas :D
     if (event.target.className == 'pixel') {
@@ -22,6 +27,7 @@ pixelBoard.addEventListener('click', function (event) { // Eu consegui fazer ess
     }
 })
 
+// Botão limpar
 let buttonClear = document.querySelector('#clear-board')
 buttonClear.addEventListener('click', function () {
     let pixel = document.querySelectorAll('.pixel')
@@ -31,28 +37,28 @@ buttonClear.addEventListener('click', function () {
     }
 })
 
-// wdah9oawhduawgdoiywagdywayfdouywafduy
+// Gerar um novo quadro de pixels
 let button = document.querySelector('#generate-board')
 button.addEventListener('click', function () { 
-    let coiso2 = document.querySelector('#board-size').value
-    if (coiso2 === '') {
+    let tamanhoQuadro = document.querySelector('#board-size').value
+    if (tamanhoQuadro === '') {
         alert('Board inválido!')
-    } else if (coiso2 >= 5 && coiso2 <= 50) {
+    } else if (tamanhoQuadro >= 5 && tamanhoQuadro <= 50) {
         let pixelBoardAtual = document.querySelector('#pixel-board').children
-        if (pixelBoardAtual.length > 0) {
+        if (pixelBoardAtual.length > 0) { // vai apagar o board anterior
             for (let index2 = 0; pixelBoardAtual.length > 0; index2 += 1) {
                 pixelBoardAtual[0].remove()
             } 
         }
         let pixelBoard = document.querySelector('#pixel-board')
         let linha = 1
-        for(let index = 1;index < coiso2 ** 2; index += 1) {
-            if (linha <= coiso2) {
+        for(let index = 1;index < tamanhoQuadro ** 2; index += 1) {
+            if (linha <= tamanhoQuadro) {
                 let div = document.createElement('div')
                 div.className = 'pixel'
                 pixelBoard.appendChild(div)
                 linha += 1
-            } else if (linha > coiso2) {
+            } else if (linha > tamanhoQuadro) {
                 let br = document.createElement('br')
                 pixelBoard.appendChild(br)
                 linha = 1
@@ -60,14 +66,14 @@ button.addEventListener('click', function () {
             
         }
         let linha2 = 0
-        for (let index = 1;index <= coiso2;index += 1) {
-            if (linha2 < coiso2) {
+        for (let index = 1;index <= tamanhoQuadro;index += 1) {
+            if (linha2 < tamanhoQuadro) {
                 let div = document.createElement('div')
                 div.className = 'pixel'
                 pixelBoard.appendChild(div)
                 linha2 += 1
                 console.log(linha2)
-            } else if (linha2 > coiso2) {
+            } else if (linha2 > tamanhoQuadro) {
                 let br = document.createElement('br')
                 pixelBoard.appendChild(br)
                 linha2 = 0
