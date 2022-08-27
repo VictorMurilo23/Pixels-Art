@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixels Art</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="title">Paleta de Cores</h1>
+      <h1 id="title">Paleta de Cores</h1>
     </header>
 
     <div id="color-palette">
-        <div class="color" id="preto"></div>
-        <div class="color" id="cor2"></div>
-        <div class="color" id="cor3"></div>
-        <div class="color" id="cor4"></div>
+      <div class="color" id="preto"></div>
+      <div class="color" id="cor2"></div>
+      <div class="color" id="cor3"></div>
+      <div class="color" id="cor4"></div>
+    </div>
+    <div class="inputs">
+      <div class="generateBoardContainer">
+        <input type="number" id="board-size" minlength="1" min="1" />
+        <!--https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input#exemplos <-- eu usei isso para me ajudar a fazer essa parte-->
+        <button id="generate-board">VQV</button>
+      </div>
+      <button id="clear-board">Limpar</button>
     </div>
 
-    <input type="number" id="board-size" minlength="1" min="1"> <!--https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input#exemplos <-- eu usei isso para me ajudar a fazer essa parte-->
-    <button id="generate-board">VQV</button> 
-    <br>
-
-    <button id="clear-board">Limpar</button>
-
-    <div id="pixel-board">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div> 
-        <br>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div> 
-        <br>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div> 
-        <br>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div> 
-        <br>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div> 
-        <br>
-    </div>
+    <div id="pixel-board"></div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
