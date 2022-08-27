@@ -43,7 +43,7 @@ header , #color-palette {
 }
 
 #generate-board {
-  width: 3em;
+  width: 4em;
   border: 1px solid black;
   border-radius: 5px;
   padding: 2px;
@@ -54,7 +54,7 @@ header , #color-palette {
   margin-top: 8px;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 2px;
+  padding: 4px;
 }
 
 #pixel-board {
